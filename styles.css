@@ -256,3 +256,16 @@ body{background:var(--dark);color:var(--ink)}
 @media(max-width:1050px){.editorial-hero .hero-grid{grid-template-columns:minmax(0,1fr) minmax(280px,1fr) minmax(0,.78fr)}.editorial-hero img.portrait-image{width:min(135%,490px)!important;height:560px!important}}
 @media(max-width:760px){.editorial-hero .hero-grid{grid-template-columns:1fr!important}.editorial-hero .hero-portrait{min-height:440px!important;height:440px!important;order:2}.editorial-hero img.portrait-image{width:min(100%,430px)!important;height:440px!important;object-fit:cover!important;object-position:center 18%!important}.editorial-hero .hero-right{order:3}}
 @media(prefers-reduced-motion:reduce){.editorial-hero img.portrait-image{animation:none!important}}
+
+
+/* Final, explicit image roles: normal portrait for brand/favicon; transparent cut-out for hero */
+.brand-photo{display:block!important;width:34px!important;height:34px!important;object-fit:cover!important;object-position:center 20%!important;border-radius:50%!important;border:1px solid rgba(255,255,255,.25)!important;background:transparent!important}
+.footer .brand-photo{width:29px!important;height:29px!important}
+.editorial-hero .hero-grid{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(330px,1.12fr) minmax(0,.82fr)!important;align-items:center!important;gap:18px!important}
+.editorial-hero .hero-portrait{display:flex!important;visibility:visible!important;opacity:1!important;position:relative!important;z-index:3!important;min-width:0!important;min-height:600px!important;height:610px!important;align-items:flex-end!important;justify-content:center!important;overflow:visible!important;background:transparent!important}
+.editorial-hero .portrait-backlight{position:absolute!important;z-index:0!important;pointer-events:none!important}
+.editorial-hero img.portrait-image{display:block!important;visibility:visible!important;opacity:1!important;position:relative!important;z-index:2!important;width:min(132%,560px)!important;max-width:none!important;height:600px!important;object-fit:contain!important;object-position:center bottom!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;mix-blend-mode:normal!important;filter:drop-shadow(0 14px 28px rgba(0,0,0,.22))!important;-webkit-mask-image:none!important;mask-image:none!important;animation:editorialFloat 7s ease-in-out infinite!important}
+.editorial-hero .portrait-label{z-index:4!important}
+@media(max-width:1050px){.editorial-hero .hero-grid{grid-template-columns:minmax(0,1fr) minmax(280px,1fr) minmax(0,.8fr)!important;gap:12px!important}.editorial-hero img.portrait-image{width:min(140%,500px)!important;height:560px!important}}
+@media(max-width:760px){.editorial-hero .hero-grid{grid-template-columns:1fr!important;gap:0!important}.editorial-hero .hero-portrait{min-height:440px!important;height:440px!important;order:2!important}.editorial-hero img.portrait-image{width:min(100%,430px)!important;height:440px!important;object-fit:contain!important;object-position:center bottom!important}.editorial-hero .hero-right{order:3!important}.editorial-hero .hero-copy{order:1!important}}
+@media(prefers-reduced-motion:reduce){.editorial-hero img.portrait-image{animation:none!important}}
