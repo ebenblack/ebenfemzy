@@ -20,11 +20,12 @@ if (menuButton && navLinks) {
 const year = document.querySelector("#year");
 if (year) year.textContent = new Date().getFullYear();
 
-// Portrait image fallback: keep the designed portrait frame graceful until the photo is added.
+// Keep the portrait visible; the image is embedded directly in the page to avoid asset-path failures.
 const portraitImage = document.querySelector(".portrait-image");
 if (portraitImage) {
   portraitImage.addEventListener("error", () => {
-    portraitImage.hidden = true;
+    portraitImage.style.display = "block";
+    portraitImage.alt = "Portrait image could not be decoded by this browser.";
   }, { once: true });
 }
 
