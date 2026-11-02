@@ -330,3 +330,7 @@ body{background:var(--dark);color:var(--ink)}
 }
 @media(min-width:1051px){.editorial-hero img.portrait-image{flex-basis:800px!important;width:800px!important;height:620px!important;margin-left:-400px!important}}
 @media(max-width:760px){.editorial-hero .hero-portrait{height:440px!important;min-height:440px!important;overflow:visible!important}.editorial-hero img.portrait-image{flex:0 0 520px!important;width:520px!important;max-width:none!important;height:440px!important;object-fit:cover!important;object-position:center top!important;position:relative!important;left:50%!important;margin-left:-260px!important;transform:translateY(-10px)!important;-webkit-mask-image:none!important;mask-image:none!important}}
+
+/* Keep portrait pixels crisp; avoid artificial softening */
+.editorial-hero img.portrait-image{filter:none!important;image-rendering:auto!important;-webkit-mask-image:none!important;mask-image:none!important}
+.site-header .brand-photo,.footer .brand-photo{object-fit:cover!important;image-rendering:auto!important}
