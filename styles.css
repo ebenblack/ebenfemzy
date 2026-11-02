@@ -334,3 +334,7 @@ body{background:var(--dark);color:var(--ink)}
 /* Keep portrait pixels crisp; avoid artificial softening */
 .editorial-hero img.portrait-image{filter:none!important;image-rendering:auto!important;-webkit-mask-image:none!important;mask-image:none!important}
 .site-header .brand-photo,.footer .brand-photo{object-fit:cover!important;image-rendering:auto!important}
+
+/* Brand portrait sizing and visibility */
+.brand-photo{display:block!important;visibility:visible!important;opacity:1!important;flex:0 0 38px!important;width:38px!important;height:38px!important;min-width:38px!important;min-height:38px!important;object-fit:cover!important;object-position:center 20%!important;border-radius:50%!important;background:#172235!important;border:1px solid rgba(180,207,245,.65)!important}
+.footer .brand-photo{width:30px!important;height:30px!important;flex-basis:30px!important;min-width:30px!important;min-height:30px!important}
