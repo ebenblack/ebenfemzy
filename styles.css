@@ -269,3 +269,12 @@ body{background:var(--dark);color:var(--ink)}
 @media(max-width:1050px){.editorial-hero .hero-grid{grid-template-columns:minmax(0,1fr) minmax(280px,1fr) minmax(0,.8fr)!important;gap:12px!important}.editorial-hero img.portrait-image{width:min(140%,500px)!important;height:560px!important}}
 @media(max-width:760px){.editorial-hero .hero-grid{grid-template-columns:1fr!important;gap:0!important}.editorial-hero .hero-portrait{min-height:440px!important;height:440px!important;order:2!important}.editorial-hero img.portrait-image{width:min(100%,430px)!important;height:440px!important;object-fit:contain!important;object-position:center bottom!important}.editorial-hero .hero-right{order:3!important}.editorial-hero .hero-copy{order:1!important}}
 @media(prefers-reduced-motion:reduce){.editorial-hero img.portrait-image{animation:none!important}}
+
+
+/* Brand portrait: embed normal original directly so the logo never depends on an asset URL */
+.site-header .brand-photo,.footer .brand-photo{display:block!important;visibility:visible!important;opacity:1!important;flex:0 0 38px!important;width:38px!important;height:38px!important;min-width:38px!important;min-height:38px!important;object-fit:cover!important;object-position:center 20%!important;border-radius:50%!important;overflow:hidden!important;background:#172235!important;border:1px solid rgba(180,207,245,.65)!important}
+.footer .brand-photo{flex-basis:30px!important;width:30px!important;height:30px!important;min-width:30px!important;min-height:30px!important}
+/* Lower the hero cut-out and feather its silhouette into the banner */
+.editorial-hero .hero-portrait{align-items:flex-end!important;overflow:hidden!important;padding-top:0!important}
+.editorial-hero img.portrait-image{transform:translateY(34px)!important;object-position:center bottom!important;-webkit-mask-image:radial-gradient(ellipse 91% 88% at 50% 45%,#000 61%,rgba(0,0,0,.97) 72%,rgba(0,0,0,.72) 83%,rgba(0,0,0,.24) 94%,transparent 100%)!important;mask-image:radial-gradient(ellipse 91% 88% at 50% 45%,#000 61%,rgba(0,0,0,.97) 72%,rgba(0,0,0,.72) 83%,rgba(0,0,0,.24) 94%,transparent 100%)!important}
+@media(max-width:760px){.editorial-hero img.portrait-image{transform:translateY(20px)!important}}
