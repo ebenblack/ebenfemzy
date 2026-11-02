@@ -75,3 +75,42 @@ body{background:var(--dark);color:var(--ink)}
 @media(max-width:850px){.hero-grid{grid-template-columns:1fr minmax(280px,.8fr);gap:8px}.hero h1{font-size:clamp(48px,6vw,66px)}.hero-portrait{height:520px}.portrait-frame{height:470px}.portrait-word{font-size:110px}.hero-side-note{display:none}}
 @media(max-width:650px){.hero{padding:40px 0 22px}.hero-grid{grid-template-columns:1fr;gap:0;min-height:0}.hero-copy{padding:25px 0 0}.hero h1{font-size:clamp(43px,12vw,61px);letter-spacing:-2.8px;max-width:570px}.hero-description{font-size:14px}.hero-note{margin-top:26px}.hero-portrait{height:440px;margin-top:0}.portrait-frame{width:min(88%,360px);height:420px}.portrait-halo{width:340px;height:340px;top:40px}.portrait-word{top:45px;font-size:clamp(83px,22vw,125px)}.float-top{top:90px;right:-2px}.float-bottom{bottom:70px;left:-2px}.portrait-caption{right:0;bottom:20px}.spark-a{top:35px;right:30px}.spark-b{top:200px;left:4px}.hero-bottom{justify-content:center;flex-wrap:wrap;gap:9px 12px;text-align:center}.hero-bottom>span{width:100%;text-align:center}.hero-bottom div{font-size:8px}.hero-bottom i{width:3px}.custom-cursor{display:none}}
 @media(prefers-reduced-motion:reduce){.portrait-float,.portrait-spark{animation:none!important}.cursor-trace{display:none!important}}
+
+
+/* Readability and real-personal-brand refinement */
+.brand-photo{width:38px;height:38px;display:block;object-fit:cover;object-position:center 24%;border-radius:50%;border:1px solid rgba(180,207,245,.55);box-shadow:0 0 0 3px rgba(112,157,224,.12)}
+.hero{background:#0b1422}
+.hero:before{opacity:.055}
+.hero-grid{grid-template-columns:minmax(0,1fr) minmax(360px,.88fr);gap:46px;min-height:590px}
+.hero-copy{max-width:590px;padding:15px 0 35px}
+.hero .eyebrow{font-size:11px;letter-spacing:1.25px;color:#a9c8f4}
+.hero h1{text-transform:none;font-size:clamp(42px,5.1vw,65px);line-height:1.12;letter-spacing:-2.4px;font-weight:750;max-width:580px;margin:22px 0 20px;color:#fff}
+.hero-highlight{color:#91b9ff;text-shadow:none}
+.hero-description{max-width:490px;color:#d2dced;font-size:16px;line-height:1.85}
+.hero-actions{margin-top:28px}
+.button-primary{background:#8eb5f1;color:#08111f;box-shadow:none}
+.button-primary:hover{background:#b7d2fa}
+.text-link{color:#e8eef8}
+.hero-note{color:#aebbd0;font-size:11px}
+.status-dot{background:#91b9ff;box-shadow:none}
+.hero-portrait{height:550px;align-items:flex-end}
+.portrait-halo{width:390px;height:390px;top:80px;background:radial-gradient(circle,rgba(112,157,224,.22),rgba(112,157,224,.05) 55%,transparent 75%);filter:none}
+.portrait-word{top:72px;font-size:clamp(82px,10vw,132px);letter-spacing:-.08em;color:rgba(145,185,255,.10)}
+.portrait-frame{width:min(100%,420px);height:510px;border-radius:220px 220px 8px 8px / 170px 170px 8px 8px;background:#709de0;border:1px solid rgba(203,225,255,.3);box-shadow:0 22px 65px rgba(0,0,0,.32);overflow:hidden}
+.portrait-image{width:100%;height:100%;object-fit:cover;object-position:center 22%;display:block}
+.portrait-frame:after{background:linear-gradient(180deg,transparent 78%,rgba(5,12,23,.12))}
+.portrait-caption{right:8px;bottom:20px;font-size:10px}
+.portrait-caption small{font-size:8px}
+.portrait-float{background:#14243a;border-color:rgba(190,214,248,.18);box-shadow:0 8px 24px rgba(0,0,0,.2);font-size:10px}
+.float-top{top:145px;right:-5px}
+.float-bottom{bottom:70px;left:-4px}
+.portrait-spark{opacity:.55}
+.hero-side-note{display:none}
+.hero-bottom{color:#dce6f5;font-size:9px}
+.hero-bottom>span{color:#a5b4c9}
+.about-section,.approach-section{background:#101c2d}
+.service-card{background:#111e30;border-radius:6px}
+.service-card:hover{transform:translateY(-2px)}
+.contact-panel{border-radius:8px;background:#14243a;box-shadow:none}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr minmax(280px,.8fr);gap:20px}.hero h1{font-size:clamp(40px,5.4vw,56px)}.hero-portrait{height:490px}.portrait-frame{height:450px}}
+@media(max-width:650px){.hero-grid{grid-template-columns:1fr;gap:0}.hero-copy{padding:18px 0 0}.hero h1{font-size:clamp(39px,10vw,54px);line-height:1.13;letter-spacing:-1.8px}.hero-description{font-size:14px;line-height:1.8}.hero-portrait{height:405px;margin-top:5px}.portrait-frame{width:min(88%,340px);height:390px}.portrait-word{font-size:88px}.float-top{top:75px}.float-bottom{bottom:55px}}
