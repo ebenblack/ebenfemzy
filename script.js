@@ -63,3 +63,33 @@ if (window.matchMedia("(hover: hover) and (pointer: fine)").matches &&
   document.addEventListener("pointerleave", () => { cursor.style.opacity = "0"; });
   document.addEventListener("pointerenter", () => { cursor.style.opacity = "1"; });
 }
+
+
+// Scroll reveals and restrained pointer-responsive movement for the new hero.
+const revealItems = document.querySelectorAll(".hero-reveal");
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.18 });
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+}
+
+const heroPortrait = document.querySelector(".hero-portrait");
+if (heroPortrait && window.matchMedia("(hover:hover) and (pointer:fine)").matches &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const image = heroPortrait.querySelector(".portrait-image");
+  heroPortrait.addEventListener("pointermove", (event) => {
+    const bounds = heroPortrait.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+    image.style.translate = `${x * 10}px ${y * 8}px`;
+  });
+  heroPortrait.addEventListener("pointerleave", () => { image.style.translate = ""; });
+}
