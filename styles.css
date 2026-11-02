@@ -338,3 +338,12 @@ body{background:var(--dark);color:var(--ink)}
 /* Brand portrait sizing and visibility */
 .brand-photo{display:block!important;visibility:visible!important;opacity:1!important;flex:0 0 38px!important;width:38px!important;height:38px!important;min-width:38px!important;min-height:38px!important;object-fit:cover!important;object-position:center 20%!important;border-radius:50%!important;background:#172235!important;border:1px solid rgba(180,207,245,.65)!important}
 .footer .brand-photo{width:30px!important;height:30px!important;flex-basis:30px!important;min-width:30px!important;min-height:30px!important}
+
+
+/* Multi-page navigation and page headers */
+.nav-links a[aria-current="page"]{color:var(--blue-bright)}
+.page-hero{padding:88px 0 76px;background:radial-gradient(ellipse at 75% 20%,rgba(75,124,198,.2),transparent 42%),linear-gradient(115deg,#080e19 4%,#0d1728 55%,#080e19 100%);border-bottom:1px solid var(--line)}
+.page-hero h1{max-width:900px;margin:22px 0 18px;font-size:clamp(44px,6vw,72px);line-height:1.05;letter-spacing:-3.5px;text-transform:none}
+.page-lead{max-width:680px;margin:0;color:#bdc9dc;font-size:16px;line-height:1.85}
+.about-page-section{background:#0d1728}
+@media(max-width:650px){.page-hero{padding:65px 0 54px}.page-hero h1{font-size:clamp(40px,11vw,56px);letter-spacing:-2.4px}.page-lead{font-size:14px}}
