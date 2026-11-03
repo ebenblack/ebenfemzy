@@ -360,12 +360,12 @@ body{background:var(--dark);color:var(--ink)}
 .marquee-group{display:flex;align-items:center;gap:76px;padding:0 38px;flex:0 0 auto}
 .platform-logo{display:flex;align-items:center;gap:13px;min-width:max-content;color:#e6edf9;opacity:.86;transition:opacity .25s ease,transform .25s ease}
 .platform-logo:hover{opacity:1;transform:translateY(-3px)}
-.platform-logo svg{width:34px;height:34px;flex:0 0 auto;display:block}
-.platform-logo.figma svg{width:24px;height:36px}
-.platform-logo.webflow svg{width:42px;height:30px}
-.platform-logo.youtube svg{width:38px;height:30px}
+.platform-logo img{width:34px;height:34px;flex:0 0 auto;display:block;object-fit:contain}
+.platform-logo.figma img{width:24px;height:36px}
+.platform-logo.webflow img{width:42px;height:30px}
+.platform-logo.youtube img{width:38px;height:30px}
 .platform-logo span{font-size:18px;font-weight:650;letter-spacing:-.35px}
 .platform-logo.amazon span{font-weight:700;letter-spacing:-1px}
 @keyframes platformScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media(max-width:760px){.platform-marquee{padding:27px 0 32px}.platform-marquee-heading{margin-bottom:22px}.marquee-group{gap:42px;padding:0 22px}.platform-logo{gap:9px}.platform-logo svg{width:29px;height:29px}.platform-logo span{font-size:15px}.marquee-track{animation-duration:30s}}
+@media(max-width:760px){.platform-marquee{padding:27px 0 32px}.platform-marquee-heading{margin-bottom:22px}.marquee-group{gap:42px;padding:0 22px}.platform-logo{gap:9px}.platform-logo img{width:29px;height:29px}.platform-logo span{font-size:15px}.marquee-track{animation-duration:30s}}
 @media(prefers-reduced-motion:reduce){.marquee-track{animation:none!important;transform:none!important}.marquee-window{overflow-x:auto;mask-image:none;-webkit-mask-image:none}}
