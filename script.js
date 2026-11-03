@@ -94,3 +94,44 @@ if (heroPortrait && window.matchMedia("(hover:hover) and (pointer:fine)").matche
   });
   heroPortrait.addEventListener("pointerleave", () => { image.style.translate = ""; });
 }
+
+
+// Animate the homepage proof points once as they enter the viewport.
+const statsSection = document.querySelector(".results-stats");
+if (statsSection) {
+  const statItems = statsSection.querySelectorAll(".stat-item");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const animateStats = () => {
+    statItems.forEach((item) => {
+      const number = item.querySelector(".stat-number");
+      const target = Number(number.dataset.count || 0);
+      const decimal = number.dataset.decimal === "true";
+      item.classList.add("is-counted");
+      if (reducedMotion) {
+        number.textContent = decimal ? target.toFixed(1) : String(target);
+        return;
+      }
+      const duration = 1500;
+      const start = performance.now();
+      const tick = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 4);
+        const value = target * eased;
+        number.textContent = decimal ? value.toFixed(1) : String(Math.round(value));
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  };
+  if ("IntersectionObserver" in window) {
+    const statsObserver = new IntersectionObserver((entries, observer) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        animateStats();
+        observer.disconnect();
+      }
+    }, { threshold: 0.25 });
+    statsObserver.observe(statsSection);
+  } else {
+    animateStats();
+  }
+}
