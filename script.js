@@ -135,3 +135,32 @@ if (statsSection) {
     animateStats();
   }
 }
+
+
+// Interactive project brief: live summary and email handoff.
+const briefForm = document.querySelector('#project-brief-form');
+if (briefForm) {
+  const service = document.querySelector('#brief-service');
+  const timeframe = document.querySelector('#brief-timeframe');
+  const budget = document.querySelector('#brief-budget');
+  const currency = document.querySelector('#brief-currency');
+  const details = document.querySelector('#brief-details');
+  const summary = document.querySelector('#brief-summary');
+  const feedback = document.querySelector('#brief-feedback');
+  const updateBriefSummary = () => {
+    const amount = budget.value ? new Intl.NumberFormat(undefined,{maximumFractionDigits:2}).format(Number(budget.value)) : 'your budget';
+    const serviceText = service.value || 'a service';
+    const timeText = timeframe.value || 'a timeframe';
+    summary.textContent = service.value || timeframe.value || budget.value ? serviceText + ' · ' + timeText + ' · ' + currency.value + ' ' + amount + (details.value.trim() ? ' · Details added' : '') : 'Choose a service, timeframe and budget to start shaping your project brief.';
+  };
+  [service,timeframe,budget,currency,details].forEach((field) => field.addEventListener('input', updateBriefSummary));
+  briefForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!briefForm.reportValidity()) return;
+    const subject = 'New project brief — ' + service.value;
+    const body = ['Hello Eben,', '', "I'd like to discuss a project with you.", '', 'Service: ' + service.value, 'Timeframe: ' + timeframe.value, 'Estimated budget: ' + currency.value + ' ' + budget.value, '', 'Project details:', details.value.trim(), '', 'Looking forward to hearing from you.'].join('\n');
+    feedback.textContent = 'Your email draft is opening. Review the details and send when you are ready.';
+    window.location.href = 'mailto:ebenblack337@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+  updateBriefSummary();
+}
