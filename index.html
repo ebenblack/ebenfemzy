@@ -187,6 +187,25 @@
     </div>
   </div>
 </section>
+
+<section class="project-brief-section" id="project-brief">
+  <div class="container">
+    <div class="brief-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> PLAN YOUR PROJECT</p><h2>Tell me what you <span>have in mind.</span></h2><p>Share the essentials and I'll get a clearer picture of the solution you're looking for.</p></div><div class="brief-heading-note"><span class="brief-pulse"></span><span>YOUR IDEA, YOUR TERMS<br><strong>Let's shape the details.</strong></span></div></div>
+    <form class="project-brief-card" id="project-brief-form">
+      <div class="brief-card-top"><span><i>✳</i> PROJECT BRIEF</span><span>01 — 04 <b>·</b> QUICK DETAILS</span></div>
+      <div class="brief-fields-grid">
+        <label class="brief-field brief-field-wide"><span><b>01</b> What service do you need?</span><select name="service" id="brief-service" required><option value="" disabled selected>Select a service</option><option>Website design & development</option><option>Website redesign</option><option>SEO & Google Business Profile</option><option>Google Ads / Facebook Ads</option><option>Social media marketing</option><option>Lead generation</option><option>Reputation & review management</option><option>AI & business automation</option><option>Multiple services / Not sure yet</option></select></label>
+        <label class="brief-field"><span><b>02</b> When do you need it?</span><select name="timeframe" id="brief-timeframe" required><option value="" disabled selected>Choose a timeframe</option><option>As soon as possible</option><option>Within 1 week</option><option>Within 2–4 weeks</option><option>Within 1–2 months</option><option>I'm flexible</option></select></label>
+        <div class="brief-field"><label for="brief-budget"><span><b>03</b> What's your estimated budget?</span></label><div class="brief-budget-control"><select name="currency" id="brief-currency" aria-label="Budget currency"><option value="USD">USD $</option><option value="GBP">GBP £</option><option value="NGN">NGN ₦</option><option value="EUR">EUR €</option></select><input id="brief-budget" name="budget" type="number" min="1" step="any" placeholder="Enter amount" required></div><small class="brief-hint">An estimate is absolutely fine.</small></div>
+        <label class="brief-field brief-field-wide"><span><b>04</b> Tell me how you'd like it done</span><textarea id="brief-details" name="details" rows="5" placeholder="Describe your goals, preferred style, features, references or anything I should know..." required></textarea></label>
+      </div>
+      <div class="brief-live-summary" aria-live="polite"><div class="brief-summary-icon">✦</div><div><small>YOUR PROJECT SNAPSHOT</small><p id="brief-summary">Choose a service, timeframe and budget to start shaping your project brief.</p></div><span class="brief-summary-status">LIVE PREVIEW</span></div>
+      <div class="brief-submit-row"><p>Your details will open in an email draft so you can review everything before sending.</p><button class="brief-submit" type="submit">SEND PROJECT BRIEF <span aria-hidden="true">↗</span></button></div>
+      <p class="brief-feedback" id="brief-feedback" role="status"></p>
+    </form>
+    <p class="brief-privacy-note"><span>⌁</span> No commitment. Just a clearer starting point for a good conversation.</p>
+  </div>
+</section>
 </main>
 
   <footer class="footer footer-3d">
