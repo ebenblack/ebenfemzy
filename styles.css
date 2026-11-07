@@ -605,3 +605,24 @@ p,li{font-size:16px;line-height:1.8}
 @media(max-width:760px){.footer-shell{padding-top:27px}.footer-topline{align-items:flex-start;gap:12px;flex-direction:column}.footer-main{grid-template-columns:1fr;gap:42px;padding:39px 0}.footer-brand-column h2{font-size:36px}.footer-contact-grid{gap:10px}.footer-contact-card{padding:12px 10px;gap:9px}.footer-icon{width:35px;height:35px;flex-basis:35px}.footer-contact-card strong{font-size:12px}.footer-contact-card small{font-size:9px}.footer-bottom{flex-wrap:wrap;justify-content:space-between}.footer-bottom>span:nth-child(2){order:3;width:100%}.footer-orb-one{right:-230px}}
 @media(max-width:420px){.footer-contact-grid{grid-template-columns:1fr}.footer-contact-card{min-height:70px;padding:12px 14px}.footer-contact-card strong{font-size:13px}.footer-contact-card small{font-size:10px}.footer-bottom{align-items:flex-start}.footer-bottom>span:first-child{width:100%}.footer-brand-column h2{font-size:33px}}
 @media(prefers-reduced-motion:reduce){.footer-contact-card,.footer-cta{transition:none}}
+
+
+/* Enhanced luminous interaction finish */
+.footer-3d{background-size:180% 180%;animation:footer-ambient-shift 16s ease-in-out infinite}
+.footer-3d:after{content:"";position:absolute;inset:-35% -20%;z-index:-1;pointer-events:none;background:linear-gradient(112deg,transparent 34%,rgba(164,194,255,.055) 46%,rgba(196,243,107,.075) 50%,transparent 62%);transform:translateX(-65%);animation:footer-light-sweep 11s ease-in-out infinite}
+.footer-orb-one{animation:footer-orbit-glow 6s ease-in-out infinite alternate}
+.footer-orb-two{animation:footer-orbit-glow 8s ease-in-out infinite alternate-reverse}
+.footer-contact-card{overflow:hidden;border-color:rgba(158,190,245,.25);box-shadow:0 6px 0 rgba(5,10,18,.72),0 14px 30px rgba(0,0,0,.26),0 0 18px rgba(105,148,220,.09),inset 0 1px 0 rgba(255,255,255,.1)}
+.footer-contact-card:before{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:linear-gradient(115deg,transparent 20%,rgba(255,255,255,.09) 48%,transparent 70%);transform:translateX(-130%);transition:transform .65s ease}
+.footer-contact-card:hover:before{transform:translateX(130%)}
+.footer-contact-card:hover .footer-icon{border-color:rgba(196,243,107,.55);color:var(--lime);box-shadow:0 0 20px rgba(196,243,107,.17),inset 0 1px 0 #ffffff30}
+.footer-icon{transition:color .2s,border-color .2s,box-shadow .2s,transform .2s}
+.footer-contact-card:hover .footer-icon{transform:translateY(-1px) scale(1.04)}
+.footer-whatsapp{border-color:rgba(196,243,107,.28);box-shadow:0 6px 0 rgba(5,10,18,.72),0 14px 30px rgba(0,0,0,.26),0 0 22px rgba(196,243,107,.09),inset 0 1px 0 rgba(255,255,255,.1)}
+.footer-whatsapp:hover{border-color:rgba(196,243,107,.8);box-shadow:0 9px 0 rgba(5,10,18,.65),0 22px 32px rgba(0,0,0,.3),0 0 30px rgba(196,243,107,.18)}
+.footer-cta{box-shadow:0 10px 0 #668a3d,0 17px 35px rgba(0,0,0,.3),0 0 26px rgba(196,243,107,.16)}
+.footer-cta:hover{box-shadow:0 7px 0 #668a3d,0 12px 25px #0005,0 0 32px rgba(196,243,107,.25)}
+@keyframes footer-ambient-shift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes footer-light-sweep{0%,18%{transform:translateX(-65%)}72%,100%{transform:translateX(65%)}}
+@keyframes footer-orbit-glow{from{filter:brightness(.75);opacity:.55}to{filter:brightness(1.45);opacity:1}}
+@media(prefers-reduced-motion:reduce){.footer-3d,.footer-3d:after,.footer-orb-one,.footer-orb-two{animation:none}.footer-contact-card:before{display:none}}
